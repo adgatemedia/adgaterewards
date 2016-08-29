@@ -1,1 +1,1 @@
-# adgaterewards
+# Adgate Reward VC Wall Documentation
