@@ -54,10 +54,41 @@ $userSalt = "thisismys$ltv@lu3";
 $userIdForVCWall = md5($userSalt.$userId);
 ```
 
-#### Step 3: Adding the iframe to your site
+### Step 3: Adding the iframe to your site
 You will take both of the pieces of information obtained in Step 1 & 2 and create an iframe using the following guideline: `https://wall.adgaterewards.com/**YOUR WALL ID (Step 1)**/**YOUR USER ID (Step 2)**`. For example:
 ```html
 <iframe src="https://wall.adgaterewards.com/nQ/6d0007e52f7afb7d5a0650b0ffb8a4d1"></iframe>
 ```
 
 It is also recommended to set the iframe height to that of the users browser. This can be done in either [CSS](http://www.tagindex.net/css/frame/width_height.html) or [inline of the iframe.](http://www.w3schools.com/tags/att_iframe_height.asp)
+
+### Postback Information
+Please whitelist the IP 104.130.7.162 to ensure you receive postbacks.
+
+Sample postback: http://yoururl.com/postback/?tx_id={transaction_id}&user_id={s1}&point_value={points}&usd_value={payout}&offer_title={vc_title}
+
+You may add any of the following macros to your postback URLs. They will be replaced with the corresponding values.
+
+- {offer_id} - ID of offer.
+- {offer_name} - Name of offer, url encoded
+- {affiliate_id} - ID of affiliate.
+- {source} - Source value specified in the tracking link.
+- {s1} - Affiliate sub specified in the tracking link.
+- {s2} - Affiliate sub 2 specified in the tracking link.
+- {s3} - Affiliate sub 3 specified in the tracking link.
+- {s4} - Affiliate sub 4 specified in the tracking link.
+- {s5} - Affiliate sub 5 specified in the tracking link.
+- {transaction_id} - ID of click and conversion on the network.
+- {session_ip} - User's IP address that started the tracking session.
+- {date} - Current date of conversion formatted as YYYY-MM-DD.
+- {time} - Current time of conversion formatted as HH:MM:SS.
+- {datetime} - Current date and time of conversion formatted as YYYY-MM-DD HH:MM:SS.
+- {ran} - Randomly generated number.
+- {payout} - Amount paid to affiliate for conversion. In whole dollars: xx.xx
+- {status} - 1 for approved conversion. 0 for charged back conversion.
+
+Additional macros for AdGate Rewards:
+
+- {s1} - User ID
+- {points} - Integer, number of points/credits the user earned on your website or game
+- {vc_title} - Title of the campaign as it is displayed on the offer wall
