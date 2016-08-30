@@ -62,33 +62,7 @@ You will take both of the pieces of information obtained in Step 1 & 2 and creat
 
 It is also recommended to set the iframe height to that of the users browser. This can be done in either [CSS](http://www.tagindex.net/css/frame/width_height.html) or [inline of the iframe.](http://www.w3schools.com/tags/att_iframe_height.asp)
 
-### Postback Information
-Please whitelist the IP 104.130.7.162 to ensure you receive postbacks.
+### Step 4: Postback Information
+You'll need to set up a URL endpoint on your server, a postback, that we will call when a user completes an offer, or we receive a chargeback for a previously completed offer. 
 
-Sample postback: http://yoururl.com/postback/?tx_id={transaction_id}&user_id={s1}&point_value={points}&usd_value={payout}&offer_title={vc_title}
-
-You may add any of the following macros to your postback URLs. They will be replaced with the corresponding values.
-
-- {offer_id} - ID of offer.
-- {offer_name} - Name of offer, url encoded
-- {affiliate_id} - ID of affiliate.
-- {source} - Source value specified in the tracking link.
-- {s1} - Affiliate sub specified in the tracking link.
-- {s2} - Affiliate sub 2 specified in the tracking link.
-- {s3} - Affiliate sub 3 specified in the tracking link.
-- {s4} - Affiliate sub 4 specified in the tracking link.
-- {s5} - Affiliate sub 5 specified in the tracking link.
-- {transaction_id} - ID of click and conversion on the network.
-- {session_ip} - User's IP address that started the tracking session.
-- {date} - Current date of conversion formatted as YYYY-MM-DD.
-- {time} - Current time of conversion formatted as HH:MM:SS.
-- {datetime} - Current date and time of conversion formatted as YYYY-MM-DD HH:MM:SS.
-- {ran} - Randomly generated number.
-- {payout} - Amount paid to affiliate for conversion. In whole dollars: xx.xx
-- {status} - 1 for approved conversion. 0 for charged back conversion.
-
-Additional macros for AdGate Rewards:
-
-- {s1} - User ID
-- {points} - Integer, number of points/credits the user earned on your website or game
-- {vc_title} - Title of the campaign as it is displayed on the offer wall
+For more detailed information you can go to [your vc wall](https://panel.adgatemedia.com/affiliate/vc-walls) click "Create AdGate Reward Wall" and then click "More Information on Postbacks" located under the Postback field.
