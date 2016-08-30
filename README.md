@@ -55,10 +55,9 @@ $userIdForVCWall = md5($userSalt.$userId);
 ```
 
 #### Step 3: Adding the iframe to your site
-You will take both of the pieces of information obtained in Step 1 & 2 and create an iframe as follows
+You will take both of the pieces of information obtained in Step 1 & 2 and create an iframe using the following guideline: `https://wall.adgaterewards.com/**YOUR WALL ID (Step 1)**/**YOUR USER ID (Step 2)**`. For example:
 ```html
-<iframe src="https://wall.adgaterewards.com/**YOUR WALL ID (Step 1)**/**YOUR USER ID (Step 2)**">
-</iframe>
+<iframe src="https://wall.adgaterewards.com/nQ/6d0007e52f7afb7d5a0650b0ffb8a4d1"></iframe>
 ```
 
 It is also recommended to set the iframe height to that of the users browser. This can be done in either [CSS](http://www.tagindex.net/css/frame/width_height.html) or [inline of the iframe.](http://www.w3schools.com/tags/att_iframe_height.asp)
