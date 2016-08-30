@@ -2,7 +2,7 @@
 
 ## Creating a new VC Wall
 ### Step 1: Go to [https://panel.adgatemedia.com/](https://panel.adgatemedia.com/)
-### Step 2: Click Monteization Tools
+### Step 2: Click Monetization Tools
 ![Alt text](/Click_Money_Tools.png?raw=true "Click 'Monetization Tools'")
 ### Step 3: Click AdGate Rewards
 ![Alt text](/Click_Adgate_Reward.png?raw=true "Click 'AdGate Rewards'")
