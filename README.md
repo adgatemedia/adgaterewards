@@ -4,8 +4,8 @@
 ### Step 1: Go to [https://panel.adgatemedia.com/](https://panel.adgatemedia.com/)
 ### Step 2: Click Monteization Tools
 ![Alt text](/Click_Money_Tools.png?raw=true "Click 'Monetization Tools'")
-### Step 3: Click Adgate Rewards
-![Alt text](/Click_Adgate_Reward.png?raw=true "Click 'Adgate Rewards'")
+### Step 3: Click AdGate Rewards
+![Alt text](/Click_Adgate_Reward.png?raw=true "Click 'AdGate Rewards'")
 ### Step 4: Click Create AdGate Rewards Wall
 ![Alt text](/Create_Adgate_Rewards_Wall.png?raw=true "Click 'Create AdGate Rewards Wall'")
 ### Step 5: Fill out the following form, each field is described below.
