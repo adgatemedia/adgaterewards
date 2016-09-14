@@ -27,7 +27,7 @@ Enter	the	web	URL	the	wall	we	be	placed	on,	or	the	URL	of	your	App
 #### Postback
 The	URL	you	would	like	us	to	notify	when	a	conversion occurs.	Click	“More	Information	on	Postbacks” to	see	a	sample and	all	the	available	macros
 #### Rounding
-AdGate	Rewards	currently	supports	only	whole	integers.	You	can	choose how	you	want	decimals	rounded	when	awarding currency.
+You	can	choose how	you	want	decimals	rounded	when	awarding currency. There is also an option to keep currencies as a decimal, up to two decimal places.
 
 ## Placing your wall
 ### Step 1: Obtain your wall ID
