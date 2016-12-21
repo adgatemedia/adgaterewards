@@ -35,9 +35,9 @@ You can find your wall id [here](https://panel.adgatemedia.com/affiliate/vc-wall
 ![Alt text](/Wall_Code_Example.png?raw=true "Wall code example")
 You can see our two codes here are **nQ** and **ng**
 ### Step 2: Determine how you will create your user id
-The	user	id	may	be	any	string	up	to	255	characters	long.	Although	a	simple	integer	
-representing	a	user	id	may	be	used,	we	highly	suggest	hashing	the	user	id	with	a	secret	
-salt	and	using	that	value	instead.	This	will	prevent	your	users	from	guessing	random	
+The	user	id	may	be	any	string	up	to	255	characters	long.	Although	a	simple	integer
+representing	a	user	id	may	be	used,	we	highly	suggest	hashing	the	user	id	with	a	secret
+salt	and	using	that	value	instead.	This	will	prevent	your	users	from	guessing	random
 integers	and	altering	another	users'	offer	wall. Below is an example how to do that in PHP.
 
 The following example assumes you have a user id from a database.
@@ -63,6 +63,8 @@ You will take both of the pieces of information obtained in Step 1 & 2 and creat
 It is also recommended to set the iframe height to that of the users browser. This can be done in either [CSS](http://www.tagindex.net/css/frame/width_height.html) or [inline of the iframe.](http://www.w3schools.com/tags/att_iframe_height.asp)
 
 ### Step 4: Postback Information
-You'll need to set up a URL endpoint on your server, a postback, that we will call when a user completes an offer, or we receive a chargeback for a previously completed offer. 
+You'll need to set up a URL endpoint on your server, a postback, that we will call when a user completes an offer, or we receive a chargeback for a previously completed offer.
 
 For more detailed information you can go to [your vc wall](https://panel.adgatemedia.com/affiliate/vc-walls) click "Create AdGate Reward Wall" and then click "More Information on Postbacks" located under the Postback field.
+
+For an example of a plain PHP script handling Postbacks see [Plain PHP Postback Example](postback.php).
