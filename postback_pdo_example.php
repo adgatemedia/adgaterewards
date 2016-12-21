@@ -3,9 +3,11 @@
 /**
  * For a plain PHP page to receive the postback data from AdGate Media you may simply
  * retrieve the array from the global $_GET variable. To ensure that the data is coming
- * from AdGate Media check that the server sending the data is AdGate Media at 104.130.7.162.
+ * from AdGate Media check that the server sending the data is from AdGate Media by the ip
+ * address as listed on your affiliate panel at http://adgatemedia.com under
+ * the Postbacks Section and the Postback Information heading.
  */
-define('AdGate_IP', '104.130.7.162');
+define('AdGate_IP', '123.123.123.123'); // Note: as noted above change the IP to match what is in your affiliate panel.
 protected $ip = $_SERVER['REMOTE_ADDR'];
 protected $data = null;
 protected $servername = "localhost";
@@ -23,6 +25,8 @@ if($ip === AdGate_IP)
     $data = $_GET;
     // Process or Persist Data here inline or via a function call.
 } else {
+
+     // Throw either a custom Exception or just throw a generic \Exception
     throw new InvalidIPException();
 }
 
@@ -34,25 +38,8 @@ if($ip === AdGate_IP)
  * the transaction_id macro's data will have a key of 'tx_id' in the $data array: $data['tx_id'];
  *
  * Possible Macros
- *   {offer_id} - ID of offer.
- *   {offer_name} - Name of offer, url encoded
- *   {affiliate_id} - ID of affiliate.
- *   {source} - Source value specified in the tracking link.
- *   {s1} - Affiliate sub specified in the tracking link.
- *   {s2} - Affiliate sub 2 specified in the tracking link.
- *   {s3} - Affiliate sub 3 specified in the tracking link.
- *   {s4} - Affiliate sub 4 specified in the tracking link.
- *   {s5} - Affiliate sub 5 specified in the tracking link.
- *   {transaction_id} - ID of click and conversion on the network.
- *   {session_ip} - User's IP address that started the tracking session.
- *   {date} - Current date of conversion formatted as YYYY-MM-DD.
- *   {time} - Current time of conversion formatted as HH:MM:SS.
- *   {datetime} - Current date and time of conversion formatted as YYYY-MM-DD HH:MM:SS.
- *   {ran} - Randomly generated number.
- *   {payout} - Amount paid to affiliate for conversion. In whole dollars: xx.xx
- *   {status} - 1 for approved conversion. 0 for charged back conversion.
- *   {points} - Decimal, number of points/credits the user earned on your website or game
- *   {vc_title} - Title of the campaign as it is displayed on the offer wall
+ * For a list of possible macros see your affiliate panel at http://adgatemedia.com under the
+ * Postbacks section and the heading Postback Information.
  *
  * Parsing:
  * From the data array you may parse the data into an object, supply it to an SQL query, or do
@@ -60,10 +47,6 @@ if($ip === AdGate_IP)
  *
  */
 
-/**
- * Parse into an Object Example
- */
-$postback = new Postback($data); // A simple data object could be a simple Collection object
 
 /**
  * Inline SQL Query Example
@@ -91,6 +74,9 @@ $conn = null;
  * Processing Example
  * This example shows sending an notification to an admin when receiving a charge back of a conversion
  * being sent to the postback url.
+ *
+ * The example uses a Static Notify class, use your own notification class or one provided by your framework
+ * of choice.
  */
 if($data['status'] == 0)
 {

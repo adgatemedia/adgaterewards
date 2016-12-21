@@ -67,4 +67,6 @@ You'll need to set up a URL endpoint on your server, a postback, that we will ca
 
 For more detailed information you can go to [your vc wall](https://panel.adgatemedia.com/affiliate/vc-walls) click "Create AdGate Reward Wall" and then click "More Information on Postbacks" located under the Postback field.
 
-For an example of a plain PHP script handling Postbacks see [Plain PHP Postback Example](postback.php).
+For an example of a plain PHP script handling Postbacks with a PDO database connection see [Plain PHP Postback PDO Example](postback_pdo_example.php).
+
+For an example of a plain PHP script handling Postbacks with an Object see [Plain PHP Postback OO Example](postback_oo_example.php).
