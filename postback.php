@@ -77,7 +77,7 @@ try {
     $conn->bindValue(':user_id', $data['user_id']);
     $conn->bindValue('offer_id', $data['offer_id']);
     // use exec() because no results are returned
-    // $conn->exec();
+    $conn->exec();
     echo "New Postback recorded successfully";
 }
 catch(PDOException $e)
