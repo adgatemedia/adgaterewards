@@ -34,25 +34,8 @@ You	can	choose how	you	want	decimals	rounded	when	awarding currency. There is al
 You can find your wall id [here](https://panel.adgatemedia.com/affiliate/vc-walls). It will look like the following image:
 ![Alt text](/Wall_Code_Example.png?raw=true "Wall code example")
 You can see our two codes here are **nQ** and **ng**
-### Step 2: Determine how you will create your user id
-The	user	id	may	be	any	string	up	to	255	characters	long.	Although	a	simple	integer
-representing	a	user	id	may	be	used,	we	highly	suggest	hashing	the	user	id	with	a	secret
-salt	and	using	that	value	instead.	This	will	prevent	your	users	from	guessing	random
-integers	and	altering	another	users'	offer	wall. Below is an example how to do that in PHP.
-
-The following example assumes you have a user id from a database.
-```php
-<?php
-// This value is from the database but here as an example
-$userId = 1;
-
-// This is just a random or sudo random string of letters
-$userSalt = "thisismys$ltv@lu3";
-
-// This will combined the two above variables
-// and create a HASH of the combination
-$userIdForVCWall = md5($userSalt.$userId);
-```
+### Step 2: Determine the user ID
+The	user	id	may	be	any	string up	to 255	characters	long.
 
 ### Step 3: Adding the iframe to your site
 You will take both of the pieces of information obtained in Step 1 & 2 and create an iframe using the following guideline: `https://wall.adgaterewards.com/**YOUR WALL ID (Step 1)**/**YOUR USER ID (Step 2)**`. For example:
