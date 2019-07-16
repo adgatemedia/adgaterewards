@@ -35,10 +35,10 @@ You can find your wall id [here](https://panel.adgatemedia.com/affiliate/vc-wall
 ![Alt text](/Wall_Code_Example.png?raw=true "Wall code example")
 You can see our two codes here are **nQ** and **ng**
 ### Step 2: Determine the user ID
-The	user	id	may	be	any	string up	to 255	characters	long.
+This is a dynamic value that should be replaced with a unique identifier for each of your users. The	user	id	may	be	any	string up	to 255	characters	long.
 
 ### Step 3: Adding the iframe to your site
-You will take both of the pieces of information obtained in Step 1 & 2 and create an iframe using the following guideline: `https://wall.adgaterewards.com/**YOUR WALL ID (Step 1)**/**YOUR USER ID (Step 2)**`. For example:
+You will take both of the pieces of information obtained in Step 1 & 2 and create an iframe using the following guideline: `https://wall.adgaterewards.com/**YOUR WALL ID (Step 1)**/** USER ID (Step 2)**`. For example:
 ```html
 <iframe src="https://wall.adgaterewards.com/nQ/6d0007e52f7afb7d5a0650b0ffb8a4d1"></iframe>
 ```
